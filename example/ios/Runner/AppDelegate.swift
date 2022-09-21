@@ -1,5 +1,6 @@
 import UIKit
 import Flutter
+import MobileRTC
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
