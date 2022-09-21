@@ -93,7 +93,7 @@ public class SwiftFlutterZoomSdkPlugin: NSObject, FlutterPlugin,FlutterStreamHan
                   self.startMeeting(call:call, result:result);
               }else{
                   let arguments = call.arguments as! Dictionary<String, String?>
-                  authService?.login(withEmail: arguments["userId"]!!, password: arguments["userPassword"]!!, rememberMe: false)
+                 // authService?.login(withEmail: arguments["userId"]!!, password: arguments["userPassword"]!!, rememberMe: false)
                   if ((authService?.isLoggedIn()) == true) {
                       self.startMeeting(call:call, result:result);
                   }
@@ -108,7 +108,7 @@ public class SwiftFlutterZoomSdkPlugin: NSObject, FlutterPlugin,FlutterStreamHan
                     self.startMeetingNormalInternal(call:call, result:result);
                 }else{
                     let arguments = call.arguments as! Dictionary<String, String?>
-                    authService?.login(withEmail: arguments["userId"]!!, password: arguments["userPassword"]!!, rememberMe: false)
+                    //authService?.login(withEmail: arguments["userId"]!!, password: arguments["userPassword"]!!, rememberMe: false)
                     if ((authService?.isLoggedIn()) == true) {
                         self.startMeetingNormalInternal(call:call, result:result);
                     }
