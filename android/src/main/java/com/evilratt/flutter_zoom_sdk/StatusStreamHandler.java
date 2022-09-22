@@ -23,7 +23,8 @@ public class StatusStreamHandler implements EventChannel.StreamHandler {
 
     @Override
     public void onListen(Object arguments, final EventChannel.EventSink events) {
-        statusListener.onMeetingStatusChanged = (meetingStatus, errorCode, internalErrorCode) -> {
+        /// https://marketplacefront.zoom.us/sdk/meeting/android/us/zoom/sdk/MeetingServiceListener.html
+        this.statusListener.onMeetingStatusChanged = (meetingStatus, errorCode, internalErrorCode) -> {
 
             if(meetingStatus == MeetingStatus.MEETING_STATUS_FAILED &&
                     errorCode == MeetingError.MEETING_ERROR_CLIENT_INCOMPATIBLE) {
