@@ -15,7 +15,7 @@ import us.zoom.sdk.MeetingStatus;
  */
 public class StatusStreamHandler implements EventChannel.StreamHandler {
     private final MeetingService meetingService;
-    private MeetingServiceListener statusListener;
+    private final MeetingServiceListener statusListener;
 
     public StatusStreamHandler(MeetingService meetingService) {
         this.meetingService = meetingService;
